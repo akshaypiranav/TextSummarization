@@ -1,0 +1,21 @@
+{% extends "include.html" %}
+
+{% block content %}
+
+<body class="container-fluid bg-dark">
+    <br><br><br><br><br><br>
+    <div class="container border border-white text-center rounded text-white fw-bold col-offset-10 col-md-10 col-xs-10">
+       <form action="" method="POST"> 
+        {% csrf_token %}
+        <br><h1 class="display-4 fw-bold">TEXT SUMMARIZATION</h1><br>
+        <textarea name="sentence" class="form form-control" placeholder="ENTER THE SENTENCE THAT YOU WANT TO SUMMARIZE" id=""  cols="30" rows="10"  ></textarea>
+        <br>
+        <input type="submit" value="SUMMARIZE" class="btn btn-primary w-100"><br><br>
+        <p class="fw-bold">{{data}}</p>
+    </form>
+    </div>
+    
+
+</body>
+
+{% endblock %}
